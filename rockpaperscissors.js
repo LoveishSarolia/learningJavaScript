@@ -2,9 +2,12 @@ const getUserChoice = userInput => {
   userInput = userInput.toLowerCase();
   if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
     return userInput;
-  } else {
-    console.log("There was an error in your answer, please enter 'rock', 'paper', or 'scissors'.");
   }
+  // since there is an early return on L4, there is no need for an else, it is considered
+  // best practice to return early and avoid the use of `else` whenever possible
+  // this principle could be applied throughout this example
+  // this is not necessarily applicable to `else if`
+  console.log("There was an error in your answer, please enter 'rock', 'paper', or 'scissors'.");
 }
 
 //console.log(getUserChoice('SCiSsors'));
